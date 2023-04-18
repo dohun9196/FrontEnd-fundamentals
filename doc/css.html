@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="../main.js"></script>
+</head>
+<div class="Wrap">
+    <header>
+        <div class="inner">
+            <h1>
+                <a href="/">Wep 정리</a>
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="../doc/html.html">HTML</a></li>
+                    <li><a href="../doc/css.html">CSS</a></li>
+                    <li><a href="../doc/js.html">JS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="mainSection" class="css sec">
+            <div class="inner">
+                <div class="tit">
+                    <h2>CSS 내용 정리</h2>
+                </div>
+                <!-- display -->
+                <div class="display content">
+                    <span class="c_t">display</span>
+                    <p class="c_d">요소가 화면에서 어떻게 표시되는지를 지정하는 속성이다.</p>
+                    <ul>
+                        <li>
+                            <span class="sp_tit">none</span>
+                            <p class="sp_desc">요소를 화면에서 보이지 않도록 숨긴다. (transition 사용 불가)</p>
+                        </li>
+                        <li>
+                            <span class="sp_tit">block</span>
+                            <p class="sp_desc">요소를 블록 레벨 요소로 표시. 즉, 요소가 한 줄을 차지하고, 줄 바꿈이 발생하며, 너비와 높이를 설정할 수 있다.</p>
+                        </li>
+                        <li>
+                            <span class="sp_tit">inline</span>
+                            <p class="sp_desc">요소를 인라인 요소로 표시, 요소가 텍스트와 같이 흐르며, 너비와 높이를 설정할 수 없다.</p>
+                        </li>
+                        <li>
+                            <span class="sp_tit">inline-block</span>
+                            <p class="sp_desc">요소를 인라인 레벨 요소처럼 흐르면서, 블록 레벨 요소처럼 너비와 높이를 설정할 수 있는 형태로 표시 한다.</p>
+                        </li>
+                        <li>
+                            <span class="sp_tit">table</span>
+                            <p class="sp_desc">요소를 테이블 레이아웃으로 표시<br />
+                                <b class="sp_b">table-caption</b> : &lt;caption&gt; 요소처럼 표현<br />
+                                <b class="sp_b">table-column-group</b> : &lt;colgroup&gt; 요소처럼 표현<br />
+                                <b class="sp_b">table-header-group</b> : &lt;thead&gt; 요소처럼 표현<br />
+                                <b class="sp_b">table-footer-group</b> : &lt;tfoot&gt; 요소처럼 표현<br />
+                                <b class="sp_b">table-row-group</b> : &lt;tbody&gt; 요소처럼 표현<br />
+                                <b class="sp_b">table-cell</b> : &lt;td&gt; 요소처럼 표현<br />
+                                <b class="sp_b">table-column</b> : &lt;col&gt; 요소처럼 표현<br />
+                                <b class="sp_b">table-row</b> : &lt;tr&gt; 요소처럼 표현<br />
+                            </p>
+                        </li>
+                        <li>
+                            <span class="sp_tit">flex</span>
+
+                            <p class="sp_desc">요소를 플렉스 박스 레이아웃으로 표시<br />
+                                <b class="sp_b">flex-direction</b> : Flex Items의 주 축을 설정 ("row", "column", "reverse"
+                                등)<br />
+                                <b class="sp_b">flex-wrap</b> : Flex Items의 여러 줄 바꿈 설정 ("nowrap", "wrap", "reverse"
+                                등)<br />
+                                <b class="sp_b">justify-content</b> : Flex Items의 주 축을 정렬<br />
+                                ("flex-start", "flex-end", "center", "space-between", "space-around" 등)<br />
+                                <b class="sp_b">align-content</b> : 축의 정렬 방법을 설정<br />
+                                ("justify-content와 동일")<br />
+                                <b class="sp_b">align-items</b> : 축에서 Items의 정렬 방법<br />
+                                ("stretch", flex-start", "flex-end", "center", "baseline" 등)<br />
+                            </p>
+                        </li>
+                        <li>
+                            <span class="sp_tit">grid</span>
+                            <p class="sp_desc">요소를 그리드 레이아웃으로 표시<br />
+                                <b class="sp_b">grid-row</b> : grid-row-xxx의 단축 속성(행 시작/끝 위치)<br />
+                                ("grid-row-start", "grid-row-end")<br />
+                                <b class="sp_b">grid-column </b> : grid-column-xxx의 단축 속성(열 시작/끝 위치)<br />
+                                ("grid-column-start", "grid-column-end")<br />
+                                <b class="sp_b">grid-area</b> : 영역(Area) 이름을 설정하거나, grid-row와 grid-column의 단축 속성<br />
+                            </p>
+                        </li>
+                        <li>
+                            <span class="sp_tit">float</span>
+                            <p class="sp_desc">복잡한 형태의 레이아웃을 구성하는데 필요한 핵심 속성으로 특정 요소를 떠있게, 흐르도록, 부유하게 하도록 하는 속성<br />
+                                "left", "right" 속성으로 제어가 가능하고(부모에 가상요소를 이용해 "clear:both"사용해야한다.)
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="position content">
+                    <span class="c_t">position</span>
+                    <p class="c_d">요소의 위치를 지정하는 속성으로, 화면 상에서 어떻게 배치될지를 조절할 수 있다.</p>
+                    <ul>
+                        <li>
+                            <span class="sp_tit">static</span>
+                            <p class="sp_desc">요소를 일반적인 문서 흐름에 따라 배치합니다.</p>
+                        </li>
+                        <li>
+                            <span class="sp_tit">relative</span>
+                            <p class="sp_desc">상대적인 위치로 이동할 수 있으며, 기준점이 된다.</p>
+                        </li>
+                        <li>
+                            <span class="sp_tit">absolute</span>
+                            <p class="sp_desc">요소를 문서 흐름에서 제거하고, 부모 요소나 가장 가까운 위치 지정 조상 요소를 기준으로 절대적인 위치로 배치</p>
+                        </li>
+                        <li>
+                            <span class="sp_tit">fixed</span>
+                            <p class="sp_desc">요소를 뷰포트를 기준으로 고정 위치로 배치(항상 고정된 값, 스크롤 영향 X)</p>
+                        </li>
+                        <li>
+                            <span class="sp_tit">sticky</span>
+                            <p class="sp_desc">스크롤이 특정 임계값을 넘어가면 고정 위치로 배치(스크롤 영향을 받아 동적으로 위치 변동)</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="text content">
+                    <span class="c_t">text</span>
+                    <p class="c_d">텍스트의 스타일과 서체에 관련된 속성들을 설정하는 데 사용한다.</p>
+                    <ul>
+                        <li>
+                            <span class="sp_tit">text-align</span>
+                            <p class="sp_desc">텍스트의 가로 정렬을 설정합니다<br />
+                                ("left", "center", "right", "justify")
+                            </p>
+                        </li>
+                        <li>
+                            <span class="sp_tit">text-decoration</span>
+                            <p class="sp_desc">텍스트의 장식을 설정합니다<br />
+                                ("none", "underline", "overline", "through ")
+                            </p>
+                        </li>
+                        <li>
+                            <span class="sp_tit">text-decoration</span>
+                            <p class="sp_desc">텍스트의 장식을 설정합니다<br />
+                                ("none", "underline", "overline", "through ")
+                            </p>
+                        </li>
+                        <li>
+                            <span class="sp_tit">text-decoration</span>
+                            <p class="sp_desc">텍스트의 장식을 설정합니다<br />
+                                ("none", "underline", "overline", "through ")
+                            </p>
+                        </li>
+                        <li>
+                            <span class="sp_tit">text-decoration</span>
+                            <p class="sp_desc">텍스트의 장식을 설정합니다<br />
+                                ("none", "underline", "overline", "through ")
+                            </p>
+                        </li>
+                        <li>
+                            <span class="sp_tit">text-decoration</span>
+                            <p class="sp_desc">텍스트의 장식을 설정합니다<br />
+                                ("none", "underline", "overline", "through ")
+                            </p>
+                        </li>
+                        <li>
+                            <span class="sp_tit">text-decoration</span>
+                            <p class="sp_desc">텍스트의 장식을 설정합니다<br />
+                                ("none", "underline", "overline", "through ")
+                            </p>
+                        </li>
+                        <li>
+                            <span class="sp_tit">text-decoration</span>
+                            <p class="sp_desc">텍스트의 장식을 설정합니다<br />
+                                ("none", "underline", "overline", "through ")
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+    </footer>
+    <div class="top">
+        <a href="#mainSection">
+            <i class="xi-angle-up"></i>
+        </a>
+    </div>
+</div>

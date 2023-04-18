@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="../main.js"></script>
+</head>
+
+<body>
+    <div class="Wrap">
+        <header>
+            <div class="inner">
+                <h1>
+                    <a href="/">Wep 정리</a>
+                </h1>
+                <nav>
+                    <ul>
+                        <li><a href="../doc/html.html">HTML</a></li>
+                        <li><a href="../doc/css.html">CSS</a></li>
+                        <li><a href="../doc/js.html">JS</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section id="mainSection" class="html sec">
+                <div class="inner">
+                    <div class="tit">
+                        <h2>HTML 내용 정리</h2>
+                    </div>
+                    <!-- 헤드 태그 -->
+                    <div class="head content">
+                        <span class="c_t">head</span>
+                        <p class="c_d">기계가 식별할 수 있는 문서 정보(메타데이터)를 담습니다. 정보로는 문서가 사용할 제목, 스크립트, 스타일 시트 등이 있습니다.</p>
+                        <ul>
+                            <li>
+                                <span class="sp_tit">meta</span>
+                                <p class="sp_desc">검색엔진 키워드, 웹페이지 설명, 뷰표트 등</p>
+                            </li>
+                            <li>
+                                <span class="sp_tit">title</span>
+                                <p class="sp_desc">브라우저의 제목 표시줄이나 페이지 탭에 보이는 문서 제목을 정의</p>
+                            </li>
+                            <li>
+                                <span class="sp_tit">link</span>
+                                <p class="sp_desc">현재 문서와 외부 리소르의 관계를 명시(stylesheet, favicon 등)</p>
+                            </li>
+                            <li>
+                                <span class="sp_tit">script</span>
+                                <p class="sp_desc">데이터와 실행 가능한 코드를 문서에 포함(JS, JSON 등)</p>
+                            </li>
+                        </ul>
+                        <div class="code">
+                            <span>예시코드</span>
+                            <p>
+                                &lt;!DOCTYPE html &gt;<br />
+                                &lt;html lang="ko" &gt;<br />
+                                &lt;head &gt;<br />
+                                &lt;meta charset="UTF-8" &gt;<br />
+                                &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;<br />
+                                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br />
+                                &lt;title&gt;documentl&lt;/title &gt;<br />
+                                &lt;link rel="stylesheet" href="./css.css" &gt;<br />
+                                &lt;script src="./js.js" defer&gt;&lt;script&gt;<br />
+                                &lt;/head &gt;
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 바디 태그 -->
+                    <div class="body content">
+                        <span class="c_t">body</span>
+                        <p class="c_d">HTML 문서의 내용을 나타냅니다. 한 문서에 하나의 "body" 요소만 존재할 수 있습니다.</p>
+                    </div>
+
+                    <!-- 바디 내부 태그 -->
+                    <div class="body_in content">
+                        <span class="c_t">주요 태그</span>
+                        <p class="c_d">body 내에 들어가는 여러가지 태그</p>
+                        <ul>
+                            <li>
+                                <span class="sp_tit">heading</span>
+                                <p class="sp_desc">h1~h6 태그까지 존재한다.<br />
+                                    h1으로 시작해서 순차적으로 작성해야하며, 페이지당 h1은 1개만 존재해야한다.
+                                </p>
+                                <div class="code">
+                                    <span>예시코드</span>
+                                    <p>
+                                        &lt;h1&gt;제목1&lt;/h1&gt;<br />
+                                        &lt;h2&gt;제목2&lt;/h2&gt;<br />
+                                        &lt;h3&gt;제목3&lt;/h3&gt;<br />
+                                        &lt;h4&gt;제목4&lt;/h4&gt;<br />
+                                        &lt;h5&gt;제목5&lt;/h5&gt;<br />
+                                        &lt;h6&gt;제목6&lt;/h6&gt;<br />
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="sp_tit">text</span>
+                                <p class="sp_desc">
+                                    <b class="sp_b">p</b> : paragraph 태그로, 단락을 표시<br />
+                                    <b class="sp_b">span</b> : 인라인 요소를 감싸 스타일링 하거나, 텍스트의 의미적 구분을 담당<br />
+                                    <b class="sp_b">strong, b</b> : 텍스트를 굵게 표시<br />
+                                    <b class="sp_b">em</b> : 텍스트를 italic으로 표시<br />
+                                    <b class="sp_b">i</b> :텍스트를 italic으로 표시 하거나 아이콘 라이브러리를 사용<br />
+                                    <b class="sp_b">br</b> : break 태그로, 줄바꿈을 표시<br />
+                                    <b class="sp_b">u</b> : underline 태그로, 텍스트에 밑줄을 표시<br />
+                                    <b class="sp_b">s</b> : strikethrough 태그로, 텍스트에 취소선을 표시<br />
+                                    <b class="sp_b">sup</b> : superscript 태그로, 텍스트를 위첨자로 표시<br />
+                                    <b class="sp_b">sub</b> : subscript 태그로, 텍스트를 아래첨자로 표시<br />
+                                    <b class="sp_b">a</b> : anchor 태그로, 링크를 생성하며, 다른 웹페이지나 파일로 연결한다.
+                                </p>
+                            </li>
+                            <li>
+                                <span class="sp_tit">list</span>
+                                <p class="sp_desc">
+                                    <b class="sp_b">ul</b> : unordered list(순서없는) 태그로, 점 또는 기호로 항목을 나열<br />
+                                    <b class="sp_b">ol</b> : ordered list(순서있는) 태그로, 숫자나 알파벳 등으로 항목을 나열<br />
+                                    <b class="sp_b">li</b> : list item(목록의 항목) 태그로, "ul", "ol" 태그내에서 사용.
+                                </p>
+                                <div class="code">
+                                    <span>예시코드</span>
+                                    <p>
+                                        &lt;ul&gt;<br />
+                                        &nbsp;&nbsp;&nbsp;&lt;li&gt;리스트01&lt;/li&gt;<br />
+                                        &nbsp;&nbsp;&nbsp;&lt;li&gt;리스트02&lt;/li&gt;<br />
+                                        &nbsp;&nbsp;&nbsp;&lt;li&gt;리스트03&lt;/li&gt;<br />
+                                        &lt;/ul&gt;<br />
+                                        &lt;ol&gt;<br />
+                                        &nbsp;&nbsp;&nbsp;&lt;li&gt;리스트01&lt;/li&gt;<br />
+                                        &nbsp;&nbsp;&nbsp;&lt;li&gt;리스트02&lt;/li&gt;<br />
+                                        &nbsp;&nbsp;&nbsp;&lt;li&gt;리스트03&lt;/li&gt;<br />
+                                        &lt;/ol&gt;
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="sp_tit">img</span>
+                                <p class="sp_desc">
+                                    <b class="sp_b">img</b> : image 태그로, 이미지 파일의 경로를 지정하여 웹 페이지에 이미지를 삽입
+                                </p>
+                            </li>
+                            <li>
+                                <span class="sp_tit">table</span>
+                                <p class="sp_desc">
+                                    <b class="sp_b">thead</b> : 테이블 헤더<br />
+                                    <b class="sp_b">tbody</b> : 테이블 본문<br />
+                                    <b class="sp_b">tfoot</b> : 테이블 푸터<br />
+                                    <b class="sp_b">tr</b> : 테이블 행<br />
+                                    <b class="sp_b">th</b> : 테이블 헤더 셀<br />
+                                    <b class="sp_b">td</b> : 테이블 데이터 셀
+                                </p>
+                                <div class="code">
+                                    <span>예시코드</span>
+                                    <p>
+                                        &lt;table&gt;<br />
+
+                                        &nbsp;&nbsp;&nbsp;&lt;thead&gt;<br />
+
+                                        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;tr&gt;<br />
+                                        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp; &lt;th scope="col" &gt;Lorem1.&lt;/th&gt;<br />
+
+                                        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp; &lt;th scope="col" &gt;Lorem2.&lt;/th&gt;<br />
+                                        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/tr&gt;<br />
+
+                                        &nbsp;&nbsp;&nbsp; &lt;/thead&gt;<br />
+
+                                        &nbsp;&nbsp;&nbsp;&lt;tbody&gt;<br />
+
+                                        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;tr&gt;<br />
+                                        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp; &lt;th scope="row" &gt;Lorem1.&lt;/th&gt;<br />
+                                        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp; &lt;td&gt;text.&lt;/td&gt;<br />
+                                        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/tr&gt;<br />
+
+                                        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;tr&gt;<br />
+                                        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp; &lt;th scope="row" &gt;Lorem1.&lt;/th&gt;<br />
+                                        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp; &lt;td&gt;text.&lt;/td&gt;<br />
+                                        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/tr&gt;<br />
+
+                                        &nbsp;&nbsp;&nbsp; &lt;/tbody&gt;<br />
+
+                                        &lt;/table&gt;<br />
+
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="sp_tit">form</span>
+                                <p class="sp_desc">
+                                    <b class="sp_b">form</b> : action" 속성을 통해 데이터를 전송할 서버의 URL을 지정하고, "method" 속성을 통해
+                                    데이터 전송 방식을 지정<br />
+                                    <b class="sp_b">input</b> : 사용자로부터 텍스트, 숫자, 이메일 등의 값을 입력받는 입력 폼 요소<br />
+                                    <b class="sp_b">type</b> : 속성을 사용하여 입력의 종류를 지정<br />
+                                    <b class="sp_b">select</b> : 하나의 값을 선택할 수 있는 드롭다운 목록 형태의 입력 폼 요소<br />
+                                    <b class="sp_b">textarea</b> : 여러 줄의 텍스트를 입력받는 입력 폼 요소<br />
+                                    <b class="sp_b">button</b> : 클릭 가능한 버튼을 생성하는 입력 폼 요소<br />
+                                    <b class="sp_b">checkbox</b> : 체크 박스 버튼을 생성하는 입력 폼 요소<br />
+                                    <b class="sp_b">radio</b> : 라디오 버튼을 생성하는 입력 폼 요소로<br />
+                                </p>
+                                <div class="code">
+                                    <span>예시코드</span>
+                                    <p>
+                                        &lt;form action="/submit" method="POST" &gt;<br />
+                                        &nbsp;&nbsp;&nbsp;&lt;input type="text" name="username" &gt;<br />
+                                        &nbsp;&nbsp;&nbsp;&lt;input type="password" name="password" &gt;<br />
+                                        &nbsp;&nbsp;&nbsp;&lt;input type="submit" value="제출" &gt;<br />
+                                        &lt;/form &gt;<br />
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 시맨틱 태그 -->
+                    <div class="semantic content">
+                        <span class="c_t">semantic</span>
+                        <p class="c_d">웹 페이지의 구조와 의미를 명확하게 표현하기 위해 HTML5에서 도입된 태그</p>
+                        <ul>
+                            <li>
+                                <span class="sp_tit">header</span>
+                                <p class="sp_desc">웹 페이지나 섹션의 머리말</p>
+                            </li>
+                            <li>
+                                <span class="sp_tit">nav</span>
+                                <p class="sp_desc">웹 페이지의 네비게이션 링크</p>
+                            </li>
+                            <li>
+                                <span class="sp_tit">aside</span>
+                                <p class="sp_desc">웹 페이지의 별도의 내용 영역</p>
+                            </li>
+                            <li>
+                                <span class="sp_tit">main</span>
+                                <p class="sp_desc">웹 페이지의 주요 내용</p>
+                            </li>
+                            <li>
+                                <span class="sp_tit">article</span>
+                                <p class="sp_desc">독립적인 내용 </p>
+                            </li>
+                            <li>
+                                <span class="sp_tit">section</span>
+                                <p class="sp_desc">웹 페이지의 구획(section)</p>
+                            </li>
+                            <li>
+                                <span class="sp_tit">figure</span>
+                                <p class="sp_desc">이미지, 도표, 삽화 등의 그래픽 컨텐츠</p>
+                            </li>
+                            <li>
+                                <span class="sp_tit">footer</span>
+                                <p class="sp_desc">웹 페이지나 섹션의 바닥글</p>
+                            </li>
+                            <li>
+                                <span class="sp_tit">address</span>
+                                <p class="sp_desc">웹 페이지의 주소나 연락처</p>
+                            </li>
+                        </ul>
+                        <div class="code">
+                            <span>예시코드</span>
+                            <p>
+                                &lt;header&gt;<br />
+                                &nbsp;&nbsp;&nbsp;&lt;h1&gt; 제목or로고 &lt;/h1&gt;<br />
+                                &nbsp;&nbsp;&nbsp;&lt;nav&gt;<br />
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&lt;ul&gt;<br />
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&lt;li&gt; 링크 &lt;/li&gt;<br />
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br />
+                                &nbsp;&nbsp;&nbsp;&lt;/nav&gt;<br />
+                                &lt;/header&gt;<br />
+
+                                &lt;main&gt;<br />
+                                &nbsp;&nbsp;&nbsp;&lt;section&gt;<br />
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&lt;div&gt;<br />
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&lt;figure&gt;<br />
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&lt;img
+                                src="./img.jpg" alt="이미지"&gt;<br />
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&lt;/figure&gt;<br />
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />
+                                &nbsp;&nbsp;&nbsp;&lt;/section&gt;<br />
+                                &lt;/main&gt;<br />
+
+                                &lt;footer&gt;<br />
+                                &nbsp;&nbsp;&nbsp;&lt;address&gt;<br />
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&lt;span&gt; 주소 &lt;span&gt;<br />
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&lt;span&gt; 연락처 &lt;span&gt;<br />
+                                &nbsp;&nbsp;&nbsp;&lt;/address&gt;<br />
+                                &lt;/footer&gt;<br />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+        </footer>
+        <div class="top">
+            <a href="#mainSection">
+                <i class="xi-angle-up"></i>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
