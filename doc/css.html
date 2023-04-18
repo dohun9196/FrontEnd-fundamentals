@@ -34,7 +34,7 @@
                 </div>
                 <!-- display -->
                 <div class="display content">
-                    <span class="c_t">display</span>
+                    <span class="c_t">DISPLAY</span>
                     <p class="c_d">요소가 화면에서 어떻게 표시되는지를 지정하는 속성이다.</p>
                     <ul>
                         <li>
@@ -101,7 +101,7 @@
                     </ul>
                 </div>
                 <div class="position content">
-                    <span class="c_t">position</span>
+                    <span class="c_t">POSITION</span>
                     <p class="c_d">요소의 위치를 지정하는 속성으로, 화면 상에서 어떻게 배치될지를 조절할 수 있다.</p>
                     <ul>
                         <li>
@@ -127,57 +127,235 @@
                     </ul>
                 </div>
                 <div class="text content">
-                    <span class="c_t">text</span>
+                    <span class="c_t">TEXT</span>
                     <p class="c_d">텍스트의 스타일과 서체에 관련된 속성들을 설정하는 데 사용한다.</p>
                     <ul>
                         <li>
                             <span class="sp_tit">text-align</span>
-                            <p class="sp_desc">텍스트의 가로 정렬을 설정합니다<br />
+                            <p class="sp_desc">텍스트의 가로 정렬을 설정<br />
                                 ("left", "center", "right", "justify")
                             </p>
                         </li>
                         <li>
                             <span class="sp_tit">text-decoration</span>
-                            <p class="sp_desc">텍스트의 장식을 설정합니다<br />
+                            <p class="sp_desc">텍스트의 장식을 설정<br />
                                 ("none", "underline", "overline", "through ")
                             </p>
                         </li>
                         <li>
-                            <span class="sp_tit">text-decoration</span>
-                            <p class="sp_desc">텍스트의 장식을 설정합니다<br />
-                                ("none", "underline", "overline", "through ")
+                            <span class="sp_tit">text-transform</span>
+                            <p class="sp_desc">텍스트의 대소문자 변환을 설정<br />
+                                ("none", "uppercase", "lowercase", "capitalize ")
                             </p>
                         </li>
                         <li>
-                            <span class="sp_tit">text-decoration</span>
-                            <p class="sp_desc">텍스트의 장식을 설정합니다<br />
-                                ("none", "underline", "overline", "through ")
+                            <span class="sp_tit">text-shadow</span>
+                            <p class="sp_desc">텍스트의 그림자를 설정<br />
+                                ("가로" "세로" "번짐" "색상")
                             </p>
                         </li>
                         <li>
-                            <span class="sp_tit">text-decoration</span>
-                            <p class="sp_desc">텍스트의 장식을 설정합니다<br />
-                                ("none", "underline", "overline", "through ")
+                            <span class="sp_tit">text-overflow</span>
+                            <p class="sp_desc">텍스트의 말줄임표 설정<br />
+                                ("clip", "visible", "ellipsis")
                             </p>
                         </li>
                         <li>
-                            <span class="sp_tit">text-decoration</span>
-                            <p class="sp_desc">텍스트의 장식을 설정합니다<br />
-                                ("none", "underline", "overline", "through ")
+                            <span class="sp_tit">font-size</span>
+                            <p class="sp_desc">텍스트의 글꼴 크기를 설정</p>
+                        </li>
+                        <li>
+                            <span class="sp_tit">font-weight</span>
+                            <p class="sp_desc">텍스트의 글꼴 굵기를 설정</p>
+                        </li>
+                        <li>
+                            <span class="sp_tit">font-family</span>
+                            <p class="sp_desc">텍스트의 글꼴 설정</p>
+                        </li>
+                        <li>
+                            <span class="sp_tit">font-style</span>
+                            <p class="sp_desc">텍스트의 글꼴 스타일 설정</p>
+                        </li>
+                        <li>
+                            <span class="sp_tit">line-height</span>
+                            <p class="sp_desc">텍스트의 줄 높이를 설정</p>
+                        </li>
+                        <li>
+                            <span class="sp_tit">letter-spacing</span>
+                            <p class="sp_desc">텍스트의 글자 간격을 설정</p>
+                        </li>
+                        <li>
+                            <span class="sp_tit">letter-spacing</span>
+                            <p class="sp_desc">텍스트의 글자 간격을 설정</p>
+                        </li>
+                        <li>
+                            <span class="sp_tit">color</span>
+                            <p class="sp_desc">텍스트의 글자 색을 설정</p>
+                        </li>
+                        <li>
+                            <span class="sp_tit">word-break</span>
+                            <p class="sp_desc">텍스트의 줄바꿈을 설정</p>
+                            ("break-all", "keep-all", "break-word")
+                        </li>
+                        <div class="code">
+                            <span>예시코드</span>
+                            <p>
+                                .text {<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; text-align: center;<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; text-decoration: none;<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; text-transform: none;<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; text-shadow : 0 0 3px #000;<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; text-overflow : ellipsis;<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; font-size: 16px;<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; font-weight: 300;<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; font-family: 'Noto Sans KR';<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; font-style: normal;<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; line-height: 1;<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; letter-spacing: 0.2px;<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; color: #fcfcfc;<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; word-break: keep-all;<br />
+                                }
+                            </p>
+                        </div>
+                    </ul>
+                </div>
+                <div class="space content">
+                    <span class="c_t">SPACE</span>
+                    <p class="c_d">요소의 여백 margin, padding, box-sizing</p>
+                    <ul>
+                        <li>
+                            <span class="sp_tit">margin</span>
+                            <p class="sp_desc">요소의 외부 여백을 설정하는 속성<br />
+                                요소와 주변 요소 간의 공간을 조절하는 속성<br />
+                                요소의 외부 여백을 통해 요소의 위치와 주변 요소와의 간격을 조절하는 속성<br />
+                                ("margin: 0 auto; 속성은 가운데 정렬됨")
                             </p>
                         </li>
                         <li>
-                            <span class="sp_tit">text-decoration</span>
-                            <p class="sp_desc">텍스트의 장식을 설정합니다<br />
-                                ("none", "underline", "overline", "through ")
+                            <span class="sp_tit">padding</span>
+                            <p class="sp_desc">요소의 내부 여백을 설정하는 속성<br />
+                                요소 내부의 내용과 테두리 사이의 공간을 조절하는 속성<br />
+                                요소의 내부 여백을 통해 요소의 내용과 테두리 사이의 간격을 조절하는 속성
                             </p>
                         </li>
                         <li>
-                            <span class="sp_tit">text-decoration</span>
-                            <p class="sp_desc">텍스트의 장식을 설정합니다<br />
-                                ("none", "underline", "overline", "through ")
+                            <span class="sp_tit">box-sizing: border-box</span>
+                            <p class="sp_desc">너비(width)와 높이(height) 속성에 값을 지정할 때 콘텐츠 영역만을 고려하게 되어, 테두리와 패딩의 크기를 따로 고려할
+                                필요가 없다.<br />
+                                패딩과 테두리의 크기가 요소의 크기에 영향을 미치지 않기 때문에, 요소 간의 간격이 일정하게 유지된다<br />
                             </p>
                         </li>
+                        <div class="code">
+                            <span>예시코드</span>
+                            <p>
+                                .inner {<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; margin: 0 auto;<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; padding: 50px 0;<br />
+                                }
+                            </p>
+                        </div>
+                    </ul>
+                </div>
+                <div class="line content">
+                    <span class="c_t">LINE</span>
+                    <p class="c_d">박스의 선 이나, 테두리 등</p>
+                    <ul>
+                        <li>
+                            <span class="sp_tit">border</span>
+                            <p class="sp_desc">테두리의 선을 설정하는 속성<br />
+                                ("solid", "dotted", "dashed", "double", "groove", "ridge", "inset", "outset")
+                            </p>
+                        </li>
+                        <li>
+                            <span class="sp_tit">border-radius</span>
+                            <p class="sp_desc">테두리의 선을 둥글게만드는 속성<br />
+                                ("px", "%")
+                            </p>
+                        </li>
+                        <li>
+                            <span class="sp_tit">outline</span>
+                            <p class="sp_desc">요소 콘텐츠의 밖에 그려지며 절대 공간을 차지하지 않는다.<br />
+                            </p>
+                        </li>
+
+                        <div class="code">
+                            <span>예시코드</span>
+                            <p>
+                                .button {<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; border: 1px solid #ddd;<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; border-radius: 50%;<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; outline: none;<br />
+                                }
+                            </p>
+                        </div>
+                    </ul>
+                </div>
+                <div class="background content">
+                    <span class="c_t">BACKGROUND</span>
+                    <p class="c_d">요소의 배경을 스타일링하는 데 사용되는 속성</p>
+                    <ul>
+                        <li>
+                            <span class="sp_tit">background-color</span>
+                            <p class="sp_desc">배경의 색상을 지정</p>
+                        </li>
+                        <li>
+                            <span class="sp_tit">background-image</span>
+                            <p class="sp_desc">배경에 사용할 이미지 지정<br />
+                                ("background-image: url(../img.jpg)")
+                            </p>
+                        </li>
+                        <li>
+                            <span class="sp_tit">background-repeat</span>
+                            <p class="sp_desc">배경 이미지의 반복 여부를 설정<br />
+                                ("repeat", "no-repeat")
+                            </p>
+                        </li>
+                        <li>
+                            <span class="sp_tit">background-position</span>
+                            <p class="sp_desc">배경 이미지의 위치를 조정<br />
+                                ("X축", "Y축")
+                            </p>
+                        <li>
+                            <span class="sp_tit">background-size</span>
+                            <p class="sp_desc">배경 이미지의 크기를 조정<br />
+                                ("contain", "cover")
+                            </p>
+                        </li>
+                        <li>
+                            <span class="sp_tit">gradient</span>
+                            <p class="sp_desc">배경 그라데이션 효과를 지정<br />
+                                ("background: linear-gradient", "background: radial-gradient")
+                            </p>
+                        </li>
+                        <div class="code">
+                            <span>예시코드</span>
+                            <p>
+                                .background-img {<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; background-image: url(../img.jpg);<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; background-repeat: no-repeat;<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; background-position: center center;<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; background-size: cover;<br />
+                                }
+                            </p>
+                        </div>
+                        <div class="code">
+                            <span>예시코드 (통합)</span>
+                            <p>
+                                .background {<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; background: url(../img.jpg) no-repeat center center
+                                / cover;<br />
+                                }
+                            </p>
+                        </div>
+                        <div class="code">
+                            <span>예시코드 (gradient)</span>
+                            <p>
+                                .background {<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; background: linear-gradient(to bottom, #ff0000 10%,
+                                #00ff00);<br />
+                                }
+                            </p>
+                        </div>
                     </ul>
                 </div>
             </div>
